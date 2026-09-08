@@ -24,3 +24,5 @@
 `site` 폴더가 공개 웹 파일입니다. 저장소 **Settings → Pages → Source**는 **GitHub Actions**이며, **Actions → Deploy game to GitHub Pages → Run workflow**로 게시합니다. 저장소에 변경을 올리는 것만으로 자동 게시되지는 않습니다.
 
 새 버전이 보이지 않으면 Ctrl+F5로 새로고침하세요. 첫 실행에는 엔진과 게임 데이터 다운로드 시간이 필요합니다.
+서머너의 긴 목 이스터에그는 매 판 시작 시 50% 확률로 등장합니다.
+
