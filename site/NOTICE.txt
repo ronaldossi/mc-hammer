@@ -1,0 +1,30 @@
+mc해머의 모험 — 포함 자료 안내
+
+Godot Engine4.7.2: MIT. 전체 고지: notices/GODOT-LICENSE.txt 및 GODOT-THIRDPARTY.txt
+Galmuri / Noto Sans KR: SIL Open Font License. notices/의 각 OFL 문서를 참조하세요.
+영상·음원 및 캐릭터 참고 자료는 사용자가 제공한 파일에서 준비했습니다. 각 자료의 권리는 해당 저작권자에게 있습니다.
+원본 영상의 오디오를 사용하며 추가 드럼·반주를 넣지 않았습니다.
+
+포함 곡22개:
+- 30년 전의 나에게
+- Swords Crossed
+- 로맨틱 웨폰
+- 몽환의 아스탤지어 · 찬미
+- Sweet Dreams, My Dear · 소향
+- Dear Friends · 효린
+- 달려라 모코코즈!
+- 늑대의 노래
+- 모두의 소원을 담아
+- Sweet Dreams, My Dear · Band ver.
+- 피어나는 불꽃의 순간
+- 쿠크세이튼 · 화려한 서커스
+- 질서의 수호자, 카제로스
+- 질병군단장 일리아칸
+- 용기의 노래
+- 샤
+- 새벽을 지키는 땅
+- 빛을 꺼트리는 자, 카멘
+- 부활한 심연의 군주
+- 마주하라, 죽음의 질서를
+- 심연의 군주, 카제로스
+- Children's Choir

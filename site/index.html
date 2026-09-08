@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mc해머의 모험</title>
+  <meta name="description" content="원본 OST 영상과 함께 즐기는 두 레인 리듬 액션">
+  <style>
+    html,body{margin:0;width:100%;height:100%;background:#080f1a;color:#ede4d0;overflow:hidden;font-family:system-ui,sans-serif}
+    body{display:grid;place-items:center}
+    #stage{position:relative;width:min(100vw,177.7778vh);aspect-ratio:16/9;overflow:hidden;background:#111d2c;isolation:isolate}
+    #background-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(var(--background-blur,4px)) brightness(.61) saturate(.82);transform:scale(1.025);z-index:0;pointer-events:none}
+    #canvas{position:absolute;inset:0;width:100%;height:100%;display:block;background:transparent;image-rendering:pixelated;outline:0;z-index:1;touch-action:none}
+    #loading{position:absolute;inset:0;display:flex;gap:20px;align-items:center;justify-content:center;flex-direction:column;background:#111d2c;z-index:4;font-size:18px}
+    #loading strong{font-size:28px;color:#d5b77b;font-weight:600}
+    #loading progress{width:min(320px,70%);accent-color:#d5b77b}
+    #media-notice{position:absolute;z-index:5;left:25%;right:25%;bottom:24%;padding:12px;background:#172231;border:1px solid #d5b77b;text-align:center;font-size:16px;line-height:1.5;pointer-events:none}
+    [hidden]{display:none!important}
+  </style>
+  <link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
+<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+
+</head>
+<body>
+  <main id="stage" aria-label="mc해머의 모험 리듬 게임">
+    <video id="background-video" playsinline preload="metadata" aria-hidden="true" hidden></video>
+    <canvas id="canvas" width="640" height="360" tabindex="0" aria-label="곡과 난이도를 선택해 플레이하세요. 위 모코코 A, 아래 코니 작은따옴표. 같은 키를 짧게 누르면 단타, 끝까지 누르면 롱노트입니다."></canvas>
+    <div id="loading"><strong>mc해머의 모험</strong><span id="loading-text">음원 선택 화면을 준비하고 있습니다</span><progress id="loading-progress"></progress></div>
+    <p id="media-notice" role="status" hidden></p>
+  </main>
+  <noscript>이 게임을 플레이하려면 JavaScript를 켜 주세요.</noscript>
+  <script src="media-manifest.js"></script>
+  <script src="media-controller.js"></script>
+  <script src="index.js"></script>
+  <script>
+    const engineConfig = {"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":29709492,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+    engineConfig.canvas = document.getElementById('canvas');
+    engineConfig.canvasResizePolicy = 0;
+    const engine = new Engine(engineConfig);
+    const missing = Engine.getMissingFeatures({threads:false});
+    function startupFailure(error){document.getElementById('loading-text').textContent='게임을 열지 못했습니다: '+String(error && error.message || error);document.getElementById('loading-progress').hidden=true;}
+    if(missing.length){startupFailure('WebGL 2와 WebAssembly를 지원하는 브라우저가 필요합니다.');}
+    else engine.startGame({canvas:engineConfig.canvas,canvasResizePolicy:0,onProgress(current,total){const p=document.getElementById('loading-progress');if(total>0){p.max=total;p.value=current;}}}).then(()=>{document.getElementById('loading').hidden=true;engineConfig.canvas.focus();},startupFailure);
+  </script>
+</body>
+</html>
+
