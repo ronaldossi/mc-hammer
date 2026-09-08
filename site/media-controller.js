@@ -114,6 +114,7 @@
       lastPosition = Math.max(lastPosition, position);
       return lastPosition;
     },
+    hasEnded() { return active && !previewMode && video.ended; },
     pauseAt(position) {
       if (!active) return;
       video.pause();
