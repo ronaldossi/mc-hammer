@@ -1,16 +1,16 @@
 {
   "success": true,
   "runtime_files": 56,
-  "runtime_bytes": 241307410,
-  "maximum_file_bytes": 52413704,
+  "runtime_bytes": 244917634,
+  "maximum_file_bytes": 56023928,
   "runtime_sha256": {
     "index.apple-touch-icon.png": "01D4F63E525941E06CE74F5187DAD030D20A8D52A07CE365AE4E94AF97A3B1F5",
     "index.audio.position.worklet.js": "BE33985BC7160D6BF9646F259CD86B259CD67B02CCB297EE5C44F8AC84327BC8",
     "index.audio.worklet.js": "5B476A9C9CE642C0EE4256436D1BC31D9C38F868ACA0F9A8E2A57C18D2DEC2A3",
-    "index.html": "47D609DEF0EAA0BC2C0D4C106D20F361B3C4F5131374DB24297FDEB684131347",
+    "index.html": "A0A002CF5CF81210A9AE88D30D54F877F1497CC85AA53A3A3AAA0BFD9D7FDAC4",
     "index.icon.png": "AD3C35AD0FACF487C618204BD98DB543034FC95224EADC7F08C7A9FF38D5B3B5",
     "index.js": "33C94CB3175F3333B82E2A3BE5E8E86F77986F0AA2042B1631F6367A4E5BB6BA",
-    "index.pck": "AE71C4AC408576F826FCE70476BE33AD9777C74E1385884BA094E0E576B8E581",
+    "index.pck": "C661A9CF3CC3EAA3DDE91366D3F857CB53CAC16543515A4E73B52561DF5DD050",
     "index.png": "3CB4495C0B98DFBE4B663CBF2B6836473572339BEB66D902367893162A70BE0E",
     "index.wasm": "FC74679E3B97F76878947FCD4FBE1268CBFA6188182A2E33BBC3F5DC9BFA57D0",
     "media/anthem_of_courage.mp4": "29BD3330C00F2C2897B6434F3CC06379D27C579B476200E08BC876AF9C8004ED",
@@ -89,25 +89,25 @@
   "gameplay_revision": {
     "completion_from_media_eof": true,
     "empty_lane_inputs_do_not_consume_notes": true,
-    "chart_revision": "instrument_stems_v1",
-    "hard_notes": 9134,
-    "nightmare_notes": 10694,
-    "run_mokokos_hard": 430,
-    "run_mokokos_nightmare": 506
+    "chart_revision": "instrument_gap_patterns_v1",
+    "hard_notes": 10126,
+    "nightmare_notes": 11994,
+    "run_mokokos_hard": 442,
+    "run_mokokos_nightmare": 523
   },
   "summoner_easter_egg_probability": 0.5,
   "instrument_analysis": {
     "tracks": 22,
     "charts": 88,
-    "notes": 29816,
+    "notes": 33448,
     "holds": 2118,
     "chord_pairs": 562,
-    "method": "Local Demucs source separation and Essentia MELODIA; phrase-led arrangement with measured supporting accents",
+    "method": "Local Demucs and MELODIA, locally normalized audible attack coverage and measured rhythm patterns",
     "notes_by_tier": {
-      "EASY": 4132,
-      "NORMAL": 5856,
-      "HARD": 9134,
-      "NIGHTMARE": 10694
+      "EASY": 4742,
+      "NORMAL": 6586,
+      "HARD": 10126,
+      "NIGHTMARE": 11994
     },
     "subjective_listening_verified": false
   },
@@ -129,5 +129,25 @@
     "pitch_changed": false,
     "polyphony": 16
   },
-  "source_checks_passed": 1437
+  "source_checks_passed": 1447,
+  "instrument_gap_fill": {
+    "added_notes": 3632,
+    "original_notes_preserved": 29816,
+    "rhythm_patterns": {
+      "jack": 163,
+      "trill": 123,
+      "anchor": 15,
+      "double": 340
+    }
+  },
+  "perfect_streak_healing": {
+    "every_consecutive_perfects": 3,
+    "current_hp_recovered": 1,
+    "capped_at_max_health": true,
+    "reset_by": [
+      "GOOD",
+      "BAD",
+      "MISS"
+    ]
+  }
 }
